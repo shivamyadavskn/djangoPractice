@@ -137,10 +137,11 @@ a:focus {
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 10px 25px;
-  color: #ffffff;
+  color:#ffffff;
   text-align: center;
   text-transform: uppercase;
 }
+
 
 .custom_nav-container .navbar-nav .nav-item .nav-link span {
   margin-left: 5px;
@@ -150,6 +151,7 @@ a:focus {
   color: #e41a2b;
 }
 
+
 .custom_nav-container .nav_search-btn {
   width: 35px;
   height: 35px;
@@ -157,6 +159,10 @@ a:focus {
   border: none;
   color: #ffffff;
   margin: 0;
+}
+
+a#nav-id {
+  background: rebeccapurple;
 }
 
 .custom_nav-container .nav_search-btn:hover {
@@ -194,6 +200,7 @@ a:focus {
   -moz-transition: all .3s;
   transition: all .3s;
 }
+
 
 .custom_nav-container .navbar-toggler span::before, .custom_nav-container .navbar-toggler span::after {
   content: "";
@@ -496,8 +503,18 @@ a:focus {
   background: white;
   width: 2px;
   height: 2px;
-  -webkit-box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
-          box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  -webkit-box-shadow: 2px 0 0 white,
+ 4px 0 0 white,
+ 4px -2px 0 white,
+ 4px -4px 0 white,
+ 4px -6px 0 white,
+ 4px -8px 0 white;
+          box-shadow: 2px 0 0 white,
+ 4px 0 0 white,
+ 4px -2px 0 white,
+ 4px -4px 0 white,
+ 4px -6px 0 white,
+ 4px -8px 0 white;
   -webkit-transform: rotate(45deg);
      -moz-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
@@ -1073,4 +1090,8 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
+/* modified by me in background-color */
+
+
 /*# sourceMappingURL=style.css.map */

@@ -184,6 +184,7 @@ a:focus {
   outline: none;
 }
 
+
 .custom_nav-container .navbar-toggler {
   padding: 0;
   width: 37px;
@@ -257,6 +258,9 @@ a:focus {
       transform: none;
     }
   }
+}
+a#nav-id {
+  background: rebeccapurple;
 }
 
 .quote_btn-container {

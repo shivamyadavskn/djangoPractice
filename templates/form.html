@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center>
+<div class="form-data">
+    <form method='POST' action="{% url 'userform' %}">
+      <div><h1 style="color:red">Form</h1></div>
+      {% csrf_token %}
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+      </form> 
+</div>
+<pre>
+
+ <h1 style="color:red"> {{name}}</h1>
+
+</pre>
+<center/>
+{% endblock content %}
