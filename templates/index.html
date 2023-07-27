@@ -1,96 +1,8 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
-  <title>Hirevac</title>
+{% block content %}
 
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
-
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-  <!-- nice select -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
-
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-
-</head>
-
-<body>
-
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              Hirevac
-            </span>
-          </a>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html"> About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="job.html">Jobs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="freelancer.html">Freelancers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  <span>
-                    Login
-                  </span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  <span>
-                    Sign Up
-                  </span>
-                </a>
-              </li>
-              <form class="form-inline">
-                <button class="btn   nav_search-btn" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </form>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
     <!-- slider section -->
     <section class="slider_section ">
       <div class="container ">
@@ -175,7 +87,7 @@
         <div class="col-sm-6 col-md-4 col-xl-2 px-0">
           <a href="#" class="box">
             <div class="img-box">
-              <img src="images/c1.png" alt="">
+              <img src="/static/images/c1.png" alt="">
             </div>
             <div class="detail-box">
               <h5>
@@ -187,7 +99,7 @@
         <div class="col-sm-6 col-md-4 col-xl-2 px-0">
           <a href="#" class="box">
             <div class="img-box">
-              <img src="images/c2.png" alt="">
+              <img src="/static/images/c2.png" alt="">
             </div>
             <div class="detail-box">
               <h5>
@@ -199,7 +111,7 @@
         <div class="col-sm-6 col-md-4 col-xl-2 px-0">
           <a href="#" class="box">
             <div class="img-box">
-              <img src="images/c3.png" alt="">
+              <img src="/static/images/c3.png" alt="">
             </div>
             <div class="detail-box">
               <h5>
@@ -211,7 +123,7 @@
         <div class="col-sm-6 col-md-4 col-xl-2 px-0">
           <a href="#" class="box">
             <div class="img-box">
-              <img src="images/c4.png" alt="">
+              <img src="/static/images/c4.png" alt="">
             </div>
             <div class="detail-box">
               <h5>
@@ -223,7 +135,7 @@
         <div class="col-sm-6 col-md-4 col-xl-2 px-0">
           <a href="#" class="box">
             <div class="img-box">
-              <img src="images/c5.png" alt="">
+              <img src="/static/images/c5.png" alt="">
             </div>
             <div class="detail-box">
               <h5>
@@ -235,7 +147,7 @@
         <div class="col-sm-6 col-md-4 col-xl-2 px-0">
           <a href="#" class="box">
             <div class="img-box">
-              <img src="images/c6.png" alt="">
+              <img src="/static/images/c6.png" alt="">
             </div>
             <div class="detail-box">
               <h5>
@@ -275,7 +187,7 @@
         </div>
         <div class="col-md-6">
           <div class="img-box">
-            <img src="images/about-img.jpg" alt="">
+            <img src="/static/images/about-img.jpg" alt="">
           </div>
         </div>
       </div>
@@ -301,7 +213,7 @@
             <div class="box">
               <div class="job_content-box">
                 <div class="img-box">
-                  <img src="images/job_logo1.png" alt="">
+                  <img src="/static/images/job_logo1.png" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -337,7 +249,7 @@
             <div class="box">
               <div class="job_content-box">
                 <div class="img-box">
-                  <img src="images/job_logo2.png" alt="">
+                  <img src="/static/images/job_logo2.png" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -380,7 +292,7 @@
             <div class="box">
               <div class="job_content-box">
                 <div class="img-box">
-                  <img src="images/job_logo3.png" alt="">
+                  <img src="/static/images/job_logo3.png" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -416,7 +328,7 @@
             <div class="box">
               <div class="job_content-box">
                 <div class="img-box">
-                  <img src="images/job_logo6.png" alt="">
+                  <img src="/static/images/job_logo6.png" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -452,7 +364,7 @@
             <div class="box">
               <div class="job_content-box">
                 <div class="img-box">
-                  <img src="images/job_logo5.png" alt="">
+                  <img src="/static/images/job_logo5.png" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -488,7 +400,7 @@
             <div class="box">
               <div class="job_content-box">
                 <div class="img-box">
-                  <img src="images/job_logo4.png" alt="">
+                  <img src="/static/images/job_logo4.png" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -548,7 +460,7 @@
         <div class="col-md-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="images/e1.jpg" alt="">
+              <img src="/static/images/e1.jpg" alt="">
             </div>
             <div class="detail-box">
               <a href="">
@@ -580,7 +492,7 @@
         <div class="col-md-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="images/e2.jpg" alt="">
+              <img src="/static/images/e2.jpg" alt="">
             </div>
             <div class="detail-box">
               <a href="">
@@ -612,7 +524,7 @@
         <div class="col-md-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="images/e3.jpg" alt="">
+              <img src="/static/images/e3.jpg" alt="">
             </div>
             <div class="detail-box">
               <a href="">
@@ -739,28 +651,4 @@
   </section>
   <!-- end info_section -->
 
-
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
-      </p>
-    </div>
-  </footer>
-  <!-- footer section -->
-
-  <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-
-
-</body>
-
-</html>
+  {% endblock content %}
