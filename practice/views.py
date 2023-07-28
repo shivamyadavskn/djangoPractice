@@ -1,9 +1,14 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render,redirect
 from .forms import userForms
+from service.models import userFormsDemo
 
 
 def HomePage(request):
+    databasedata=userFormsDemo.objects.all()
+    for i in databasedata:
+        print(i.fname)
+        print(i.lname)
     return render(request,'index.html')
 
 def about(request):

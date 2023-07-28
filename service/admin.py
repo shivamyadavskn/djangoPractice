@@ -1,12 +1,12 @@
 from django.contrib import admin
-from .models import userForms
+from .models import userFormsDemo
 from .models import userDemoForms
 # Register your models here.
 
 class serviceAdmin(admin.ModelAdmin):
     list_display=['fname','lname','email','boollean']
     
-admin.site.register(userForms,serviceAdmin)
+admin.site.register(userFormsDemo,serviceAdmin)
 
 
 # demo purposes
