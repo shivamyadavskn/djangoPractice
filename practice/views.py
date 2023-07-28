@@ -1,11 +1,13 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render,redirect
+from .forms import userForms
 
 
 def HomePage(request):
     return render(request,'index.html')
 
 def about(request):
+    fn=userForms()
     datas=""
     try:
         if request.method=='GET':
@@ -22,6 +24,7 @@ def job(request):
     return render(request,'job.html')
 
 def form(request):
+    importedform=userForms()
     data=""
     try:
         if request.method=='POST':
@@ -32,7 +35,7 @@ def form(request):
             return redirect(url)
     except:
         pass
-    return render(request,'form.html',{'name':data})
+    return render(request,'form.html',{'fn':importedform,'name':data})
 
 def userform(request):
     name=request.POST['fname']
