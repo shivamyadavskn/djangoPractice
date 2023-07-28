@@ -5,11 +5,13 @@ from service.models import userFormsDemo
 
 
 def HomePage(request):
-    databasedata=userFormsDemo.objects.all()
+    databasedata=userFormsDemo.objects.all().order_by('-email')
+    data=[]
     for i in databasedata:
-        print(i.fname)
-        print(i.lname)
-    return render(request,'index.html')
+        data.append({i.fname+i.lname})
+        data.append({i.email})
+        print(i.email)
+    return render(request,'index.html',{"name":data})
 
 def about(request):
     datas=""
