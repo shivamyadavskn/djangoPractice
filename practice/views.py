@@ -7,7 +7,6 @@ def HomePage(request):
     return render(request,'index.html')
 
 def about(request):
-    fn=userForms()
     datas=""
     try:
         if request.method=='GET':
@@ -38,7 +37,9 @@ def form(request):
     return render(request,'form.html',{'fn':importedform,'name':data})
 
 def userform(request):
-    name=request.POST['fname']
+    fname=request.POST['fname']
+    lname=request.POST['lname']
+    name=fname+lname
     return HttpResponse(name)
 
 #  we can use HttpsResposeRedirect or django.shortcut redirect function both for  same work
