@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    {% for obj in objs %}
+
+    <center><h1 style="color:red">{{obj.news_title}}  <br>{{obj.news_desc | safe}}></h1></center>
+    
+    {% endfor %}
+
+
+{% endblock content %}

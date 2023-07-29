@@ -2,6 +2,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render,redirect
 from .forms import userForms
 from service.models import userFormsDemo
+from news.models import newsModels
 
 
 def HomePage(request):
@@ -10,7 +11,6 @@ def HomePage(request):
     for i in databasedata:
         data.append({i.fname+i.lname})
         data.append({i.email})
-        print(i.email)
     return render(request,'index.html',{"name":data})
 
 def about(request):
@@ -48,6 +48,14 @@ def userform(request):
     lname=request.POST['lname']
     name=fname+lname
     return HttpResponse(name)
+
+
+def newDemo(request):
+    obj=newsModels.objects.all()
+    return render(request,'newdemo.html',{'objs':obj})
+    
+
+
 
 #  we can use HttpsResposeRedirect or django.shortcut redirect function both for  same work
 # def form(request):
