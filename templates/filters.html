@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="GET">
+    <input type="text" name="queriesss" placeholder="Enter Data for Search" />
+    <button type="submit">
+      Filter
+    </button>
+  </form>
+
+{% for obj in objs %}
+
+<center><h1 style="color:green">
+    <p>{{obj.id}}</p>
+    <p> {{obj.news_title}}</p>
+    <p>{{obj.news_desc | safe}}></p>
+</center>
+
+{% empty %}
+
+    <center><p style="color:red">Sorry, no athletes in this list.</p></center>
+
+{% endfor %}
+    
+    
+
+{% endblock content %}

@@ -25,5 +25,7 @@ urlpatterns = [
     path('job/',views.job,name="job"),
     path('form/',views.form,name="form"),
     path('userform/',views.userform,name="userform"),
-    path('newdemo/',views.newDemo,name="newDemo"),
+    path('newdemo/<newsid>',views.newDemo),
+    path('filters/',views.filterData),
+    
 ]

@@ -24,7 +24,8 @@ def about(request):
     return render(request,'about.html',{'newdata':datas})
 
 def freelancer(request):
-    return render(request,'freelancer.html')
+    obj=newsModels.objects.all()
+    return render(request,'freelancer.html',{'news':obj})
 
 def job(request):
     return render(request,'job.html')
@@ -50,9 +51,20 @@ def userform(request):
     return HttpResponse(name)
 
 
-def newDemo(request):
-    obj=newsModels.objects.all()
-    return render(request,'newdemo.html',{'objs':obj})
+def newDemo(request,newsid):
+    objs=newsModels.objects.get(id=newsid)
+    return render(request,'newdemo.html',{'obj':objs})
+
+def filterData(request):
+    objs=newsModels.objects.all()
+    try:
+        if request.method=="GET":
+            queriess=request.GET['queriesss']
+            objs=newsModels.objects.filter(news_desc__contains=queriess)
+    except:
+        pass    
+    return render(request,'filters.html',{'objs':objs})
+
     
 
 
