@@ -51,8 +51,8 @@ def userform(request):
     return HttpResponse(name)
 
 
-def newDemo(request,newsid):
-    objs=newsModels.objects.get(id=newsid)
+def newDemo(request,slug):
+    objs=newsModels.objects.get(news_slug=slug)
     return render(request,'newdemo.html',{'obj':objs})
 
 def filterData(request):
