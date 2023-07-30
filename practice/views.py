@@ -58,12 +58,12 @@ def newDemo(request,slug):
 def filterData(request):
     objs=newsModels.objects.all()
     try:
-        if request.method=="GET":
-            queriess=request.GET['queriesss']
-            objs=newsModels.objects.filter(news_desc__contains=queriess)
+        if request.method=="POST":
+            queriess=request.POST['queriesss']
+            objs=newsModels.objects.filter(news_slug__icontains=queriess)
     except:
         pass    
-    return render(request,'filters.html',{'objs':objs})
+    return render(request,'filters.html',{'objss':objs})
 
     
 
