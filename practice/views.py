@@ -51,19 +51,19 @@ def userform(request):
     return HttpResponse(name)
 
 
-def newDemo(request,newsid):
-    objs=newsModels.objects.get(id=newsid)
+def newDemo(request,slug):
+    objs=newsModels.objects.get(news_slug=slug)
     return render(request,'newdemo.html',{'obj':objs})
 
 def filterData(request):
     objs=newsModels.objects.all()
     try:
-        if request.method=="GET":
-            queriess=request.GET['queriesss']
-            objs=newsModels.objects.filter(news_desc__contains=queriess)
+        if request.method=="POST":
+            queriess=request.POST['queriesss']
+            objs=newsModels.objects.filter(news_slug__icontains=queriess)
     except:
         pass    
-    return render(request,'filters.html',{'objs':objs})
+    return render(request,'filters.html',{'objss':objs})
 
     
 
